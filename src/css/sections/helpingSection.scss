@@ -1,0 +1,53 @@
+@import "../variables.scss";
+
+.helping-section {
+  background: linear-gradient(to right, $helping-section-bgc 75%, #fff 25%);
+  min-height: 840px;
+
+  &-inner {
+    background-image: url("../../images/maskGroup.png"),
+      url("../../images/Rectangle3.1.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  &-content-wrapper {
+    padding-bottom: 75px;
+    padding-top: 20px;
+  }
+
+  &-content {
+    max-width: 490px;
+  }
+
+  &-suptitle {
+      margin-bottom: 27px;
+      display: inline-block;
+  }
+
+  &-title {
+    color: $dark-blue;
+    font-size: 48px;
+    line-height: 53px;
+    letter-spacing: -0.035em;
+    margin-bottom: 80px;
+  }
+
+  &-text {
+    color: $dark-blue;
+    font-size: 24px;
+    line-height: 42px;
+    margin-bottom: 60px;
+  }
+
+  &-controls {
+    display: flex;
+    align-items: center;
+
+    .btn {
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}
