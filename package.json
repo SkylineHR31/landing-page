@@ -1,0 +1,34 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "a portfolio layout project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkylineHR31/landing-page.git"
+  },
+  "author": "Alexandr Furmanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkylineHR31/landing-page/issues"
+  },
+  "homepage": "https://github.com/SkylineHR31/landing-page#readme",
+  "devDependencies": {
+    "css-loader": "^6.5.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.43.3",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.2.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "normalize.css": "^8.0.1"
+  }
+}
