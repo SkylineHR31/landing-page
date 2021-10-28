@@ -1,13 +1,23 @@
 @import "../variables.scss";
+@import "../mixins.scss";
 
 .know-section {
   min-height: 800px;
   color: $dark-blue;
 
+  @include _1024 {
+    color: #fff;
+    background-color: $light-blue;
+  }
+
   &-inner {
     background-image: url("../../images/linkedin-sales-navigator-402831.jpg");
     background-repeat: no-repeat;
     background-position: top left;
+
+    @include _375 {
+      background-image: none;
+    }
   }
 
   &-content-wrapper {
@@ -22,12 +32,22 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+
+    @include _1440 {
+      align-items: flex-end;
+    }
   }
+
   &-title {
     margin-bottom: 75px;
     font-size: 16px;
     line-height: 12px;
     text-transform: uppercase;
+
+    @include _1024 {
+      text-shadow: 1px 1px 2px black;
+      color: #fff;
+    }
   }
 
   &-text,
@@ -42,11 +62,28 @@
       margin-bottom: 75px;
       font-size: 64px;
       line-height: 94px;
+
+      @include _768 {
+        font-size: 46px;
+        line-height: 52px;
+      }
+    }
+
+    @include _1024 {
+      text-shadow: 1px 1px 2px black;
+      color: #fff;
     }
   }
 
   &-btn-wrapper {
     display: flex;
+
+    .btn {
+      @include _1024 {
+        color: #fff;
+        text-shadow: 1px 1px 2px black;
+      }
+    }
   }
 
   &.contacts {
@@ -57,12 +94,22 @@
       &-inner {
         background-image: url("../../images/charles-etoroma-390119.jpg");
         background-position: top right;
+
+        @include _375 {
+          background-image: none;
+        }
       }
 
       &-content-wrapper {
         padding-bottom: 42px;
         padding-top: 103px;
         align-items: flex-start;
+      }
+
+      &-content {
+        @include _1440 {
+          align-items: flex-start;
+        }
       }
 
       &-text {

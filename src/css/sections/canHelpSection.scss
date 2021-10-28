@@ -1,4 +1,5 @@
 @import "../variables.scss";
+@import "../mixins.scss";
 
 .canhelp-section {
   &-inner {
@@ -16,12 +17,24 @@
   &-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    // 1440px-1024px mixin - 480px in minmax()
+
+    @include _1440 {
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    }
+
+    @include _768 {
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    }
   }
 
   &-item {
     height: 360px;
     padding: 72px 52px;
+
+    @include _768 {
+      height: 340px;
+      padding: 50px;
+    }
 
     &:first-child {
       background-color: #ffe2de;

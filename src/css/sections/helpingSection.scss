@@ -1,14 +1,30 @@
 @import "../variables.scss";
+@import "../mixins.scss";
 
 .helping-section {
   background: linear-gradient(to right, $helping-section-bgc 75%, #fff 25%);
   min-height: 840px;
+
+  @include _1024 {
+    min-height: auto;
+    background: $helping-section-bgc;
+    padding-top: 120px;
+  }
 
   &-inner {
     background-image: url("../../images/maskGroup.png"),
       url("../../images/Rectangle3.1.png");
     background-repeat: no-repeat;
     background-position: top right;
+
+    @include _1024 {
+      background-image: url("../../images/maskGroup.png");
+      background-size: 50%, 50%;
+    }
+
+    @include _768 {
+      background-image: none;
+    }
   }
 
   &-content-wrapper {
@@ -18,11 +34,19 @@
 
   &-content {
     max-width: 490px;
+
+    @include _768 {
+      max-width: none;
+    }
   }
 
   &-suptitle {
-      margin-bottom: 27px;
-      display: inline-block;
+    margin-bottom: 27px;
+    display: inline-block;
+
+    @include _768 {
+      display: none;
+    }
   }
 
   &-title {
@@ -31,6 +55,11 @@
     line-height: 53px;
     letter-spacing: -0.035em;
     margin-bottom: 80px;
+
+    @include _768 {
+      font-size: 32px;
+      text-align: center;
+    }
   }
 
   &-text {

@@ -1,4 +1,5 @@
 @import "../variables.scss";
+@import "../mixins.scss";
 
 .why-section {
   background: $light-blue;
@@ -9,6 +10,10 @@
     background-image: url("../../images/christopher-campbell.jpg");
     background-repeat: no-repeat;
     background-position: top right;
+
+    @include _375 {
+      background-image: none;
+    }
   }
 
   &-content-wrapper {
@@ -23,11 +28,19 @@
     margin-bottom: 75px;
     font-size: 36px;
     line-height: 27px;
+
+    @include _1024 {
+      text-shadow: 1px 1px 2px black;
+    }
   }
 
   &-text {
     font-size: 18px;
     line-height: 35px;
+
+    @include _1024 {
+      text-shadow: 1px 1px 2px black;
+    }
 
     .upper {
       font-weight: bold;

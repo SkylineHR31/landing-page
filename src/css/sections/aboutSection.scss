@@ -1,8 +1,13 @@
 @import "../variables.scss";
+@import "../mixins.scss";
 
 .about-section {
   min-height: 440px;
   color: $dark-blue;
+
+  @include _1024 {
+    min-height: auto;
+  }
 
   &-inner {
     padding: 150px 0 75px;
@@ -10,6 +15,10 @@
     flex-flow: column;
     align-items: center;
     position: relative;
+
+    @include _1024 {
+      padding: 50px 15px;
+    }
   }
 
   &-text {
@@ -24,5 +33,10 @@
     font-size: 16px;
     line-height: 23px;
     text-transform: uppercase;
+
+    @include _1024 {
+      position: static;
+      margin-bottom: 24px;
+    }
   }
 }

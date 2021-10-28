@@ -1,8 +1,8 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
   max-width: 1470px;
   width: 100%;
   flex: 1;
@@ -18,7 +18,7 @@
     right: 0;
 
     &-inner {
-      padding: 27px 0;
+      padding: 27px 15px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -41,6 +41,14 @@
           border-bottom: 1px solid $dark-blue;
         }
       }
+
+      @include _768 {
+        display: none;
+      }
+
+      //   просто скрыл так навигацию, потому что в дизайне нет бургер меню,
+      //   да и я все равно его не успеваю сделать до стади ТЗ :(
+      //   Но как делать - Знаю :)
     }
 
     &-contact {
@@ -75,6 +83,7 @@
         display: flex;
         flex-flow: column;
         justify-content: flex-end;
+        padding: 0 15px;
       }
     }
   }
@@ -90,19 +99,32 @@
         min-height: 80px;
         display: flex;
         align-items: center;
+        padding: 0 15px;
       }
     }
 
     &-inner {
       display: flex;
-      padding: 100px 0;
+      padding: 100px 15px;
       justify-content: center;
       min-height: 380px;
+
+      @include _768 {
+        flex-flow: column;
+      }
     }
 
     &-item {
       margin: 0 50px;
       max-width: 240px;
+
+      @include _768 {
+        margin: 0 10px 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
       .title {
         color: $dark-blue;
@@ -131,12 +153,12 @@
         }
 
         .email {
-            color: #0052C1;
+          color: #0052c1;
         }
 
         .block {
-            display: inline-block;
-            width: 100%;
+          display: inline-block;
+          width: 100%;
         }
       }
     }
