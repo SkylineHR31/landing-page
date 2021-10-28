@@ -33,6 +33,14 @@ a {
   &.golden-transparent {
     color: $golden-text;
   }
+
+  &.light-blue {
+    color: $light-blue;
+  }
+
+  &.no-paddings {
+    padding: 0;
+  }
 }
 
 h1,
@@ -43,4 +51,31 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.site-section-item {
+  color: #fff;
+  font-size: 32px;
+  line-height: 34px;
+  font-weight: bold;
+
+  .inner-text {
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    width: 100%;
+
+    &::before {
+      content: "•";
+      color: $golden-text;
+      position: absolute;
+      left: 0;
+    }
+  }
 }

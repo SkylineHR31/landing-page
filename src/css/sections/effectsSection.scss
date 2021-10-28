@@ -1,0 +1,21 @@
+@import "../variables.scss";
+
+.effects-section {
+  &-item {
+    min-height: 240px;
+    color: $dark-blue;
+    padding: 55px 77px 37px 105px;
+
+    .title {
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 28px;
+    }
+
+    .text {
+      opacity: 0.5;
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+}

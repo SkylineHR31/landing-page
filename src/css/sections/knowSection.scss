@@ -1,0 +1,74 @@
+@import "../variables.scss";
+
+.know-section {
+  min-height: 800px;
+  color: $dark-blue;
+
+  &-inner {
+    background-image: url("../../images/linkedin-sales-navigator-402831.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  &-content-wrapper {
+    padding-bottom: 42px;
+    padding-top: 103px;
+    align-items: flex-end;
+  }
+
+  &-content {
+    max-width: 676px;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  &-title {
+    margin-bottom: 75px;
+    font-size: 16px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+
+  &-text,
+  .logo {
+    font-size: 36px;
+    line-height: 53px;
+    font-weight: bold;
+
+    .upper {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 75px;
+      font-size: 64px;
+      line-height: 94px;
+    }
+  }
+
+  &-btn-wrapper {
+    display: flex;
+  }
+
+  &.contacts {
+    color: #fff;
+    background-color: $dark-blue;
+
+    .know-section {
+      &-inner {
+        background-image: url("../../images/charles-etoroma-390119.jpg");
+        background-position: top right;
+      }
+
+      &-content-wrapper {
+        padding-bottom: 42px;
+        padding-top: 103px;
+        align-items: flex-start;
+      }
+
+      &-text {
+        font-size: 36px;
+        line-height: 53px;
+      }
+    }
+  }
+}

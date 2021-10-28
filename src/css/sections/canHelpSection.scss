@@ -1,0 +1,42 @@
+@import "../variables.scss";
+
+.canhelp-section {
+  &-inner {
+    padding-bottom: 60px;
+  }
+
+  &-title {
+    color: rgba(34, 53, 111, 0.5);
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 24px;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    // 1440px-1024px mixin - 480px in minmax()
+  }
+
+  &-item {
+    height: 360px;
+    padding: 72px 52px;
+
+    &:first-child {
+      background-color: #ffe2de;
+    }
+
+    &:nth-child(2) {
+      background-color: #c4e769;
+    }
+
+    &:nth-child(3) {
+      background-color: $light-blue;
+    }
+
+    &:last-of-type {
+      background-color: #0052c1;
+    }
+  }
+}

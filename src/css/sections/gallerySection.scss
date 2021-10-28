@@ -1,0 +1,62 @@
+@import "../variables.scss";
+
+.gallery-section {
+  &-inner {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    // 1440px-1024px mixin - 480px in minmax()
+  }
+
+  &-item {
+    height: 480px;
+    padding: 96px 72px;
+    cursor: pointer;
+    position: relative;
+
+    img {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &:first-child {
+      background-color: $dark-blue;
+    }
+
+    &:nth-child(2) {
+      background-color: #0052c1;
+    }
+
+    &:nth-child(3) {
+      background-color: #c4e769;
+    }
+
+    &:nth-child(4) {
+      background-color: $light-blue;
+    }
+
+    &:nth-child(5) {
+      background-color: #dee1ff;
+    }
+
+    &:last-of-type {
+      background-color: #8f00ff;
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
