@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "build.js",
-    publicPath: "/", // public URL of the output directory when referenced in a browser
+    publicPath: "/landing-page/", // public URL of the output directory when referenced in a browser
   },
   module: {
     rules: [
