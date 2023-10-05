@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "deploy": "gh-pages -b deploy-branch -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/SkylineHR31/landing-page/issues"
   },
-  "homepage": "https://github.com/SkylineHR31/landing-page#readme",
+  "homepage": "https://skylinehr31.github.io/landing-page",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.0",
